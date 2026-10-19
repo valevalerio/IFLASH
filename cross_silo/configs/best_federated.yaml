@@ -1,0 +1,56 @@
+program: sim.py
+method: bayes
+metric:
+  name: global/val_f1_w
+  goal: maximize
+early_terminate:
+  type: hyperband
+  min_iter: 3
+parameters:
+  hidden_units:
+    min: 24
+    max: 128
+  batch_size:
+    values:
+      - 4
+      - 8
+      - 16
+      - 32
+      - 64
+      - 80
+      - 128
+    
+  learning_rate:
+    min: 0.001
+    max: 0.5
+  momentum:
+    min: 0.0
+    max: 0.9
+  class_weight:
+    values: ["True", "False"]
+  dropout:
+    min: 0.0
+    max: 0.2
+  local_epochs:
+    min: 1
+    max: 5
+  
+      
+
+command:
+  - python
+  - ${program}
+  - --dataset_name
+  - name_of_dataset
+  - --alpha
+  - alpha_distribution
+  - --num_clients
+  - total_clients
+  - --layers
+  - 2
+  - --num_rounds
+  - 30
+  - ${args}
+
+# the following is the command to run the program
+# python sim.py --dataset_name dry_bean --alpha 100000 --num_clients 8 --layers 2 --hidden_units 32 --batch_size 4 --learning_rate 0.05 --momentum 0.4 --class_weight True --dropout 0.05 --local_epochs 3 --num_rounds 50

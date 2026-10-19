@@ -1,0 +1,16 @@
+ ███████████ █████       ██████████  █████ █████   █████████   █████
+░░███░░░░░░█░░███       ░░███░░░░░█ ░░███ ░░███   ███░░░░░███ ░░███ 
+ ░███   █ ░  ░███        ░███  █ ░   ░░███ ███   ░███    ░███  ░███ 
+ ░███████    ░███        ░██████      ░░█████    ░███████████  ░███ 
+ ░███░░░█    ░███        ░███░░█       ███░███   ░███░░░░░███  ░███ 
+ ░███  ░     ░███      █ ░███ ░   █   ███ ░░███  ░███    ░███  ░███ 
+ █████       ███████████ ██████████  █████ █████ █████   █████ █████
+░░░░░       ░░░░░░░░░░░ ░░░░░░░░░░  ░░░░░ ░░░░░ ░░░░░   ░░░░░ ░░░░░ 
+                                                                   
+Federated LEarning with post-hox eXplainabile Artificial Intelligence
+
+Inspired by the paper: "Explaining Black-Boxes in Federated Learning" 
+by Luca Corbucci, Riccardo Guidotti and Anna Monreale
+
+Implementation by: Valerio Bonsignori
+Project of Phd student: Valerio Bonsignori

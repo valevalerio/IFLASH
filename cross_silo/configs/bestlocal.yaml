@@ -1,0 +1,43 @@
+program: local_model_for_HP.py
+method: bayes
+metric:
+  name: test_f1
+  goal: maximize
+early_terminate:
+  type: hyperband
+  min_iter: 3
+parameters:
+  layers:
+    min: 1
+    max: 3
+  hidden_units:
+    min: 16
+    max: 64
+  batch_size:
+    min: 4
+    max: 128
+  learning_rate:
+    min: 0.001
+    max: 0.5
+  momentum:
+    min: 0.0
+    max: 0.9
+  class_weight:
+    values: ["True", "False"]
+  dropout:
+    min: 0.0
+    max: 0.5
+
+
+command:
+  - python
+  - ${program}
+  - --dataset_name
+  - name_of_dataset
+  - ${args}
+  - --client_id
+  - client_identifier
+  - --alpha
+  - alpha_distribution
+  - --num_clients
+  - total_clients

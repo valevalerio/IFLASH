@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Data and experiment outputs (see data/README.md)
+Experiments/
+data/*
+!data/README.md
+logs/
+wandb/
+cddiagrams/
+plots/
+*.pth
+*.pt
+*.npz
+*.npy
+*.csv
+*.log
+
+# External code (see README)
+FederatedDataset/
+SHAP_FL/
