@@ -1,16 +1,20 @@
- ███████████ █████       ██████████  █████ █████   █████████   █████
-░░███░░░░░░█░░███       ░░███░░░░░█ ░░███ ░░███   ███░░░░░███ ░░███ 
- ░███   █ ░  ░███        ░███  █ ░   ░░███ ███   ░███    ░███  ░███ 
- ░███████    ░███        ░██████      ░░█████    ░███████████  ░███ 
- ░███░░░█    ░███        ░███░░█       ███░███   ░███░░░░░███  ░███ 
- ░███  ░     ░███      █ ░███ ░   █   ███ ░░███  ░███    ░███  ░███ 
- █████       ███████████ ██████████  █████ █████ █████   █████ █████
-░░░░░       ░░░░░░░░░░░ ░░░░░░░░░░  ░░░░░ ░░░░░ ░░░░░   ░░░░░ ░░░░░ 
-                                                                   
-Federated LEarning with post-hox eXplainabile Artificial Intelligence
+ █████  ███████████  █████          █████████     █████████   █████   █████
+░░███  ░░███░░░░░░█ ░░███          ███░░░░░███   ███░░░░░███ ░░███   ░░███
+ ░███   ░███   █ ░   ░███         ░███    ░███  ░███    ░░░   ░███    ░███
+ ░███   ░███████     ░███         ░███████████  ░░█████████   ░███████████
+ ░███   ░███░░░█     ░███         ░███░░░░░███   ░░░░░░░░███  ░███░░░░░███
+ ░███   ░███  ░      ░███      █  ░███    ░███   ███    ░███  ░███    ░███
+ █████  █████        ███████████  █████   █████ ░░█████████   █████   █████
+░░░░░  ░░░░░        ░░░░░░░░░░░   ░░░░░   ░░░░░  ░░░░░░░░░   ░░░░░   ░░░░░
 
-Inspired by the paper: "Explaining Black-Boxes in Federated Learning" 
+iFLASH: interpreting Federated Learning by Aggregating SHAP explanations
+
+Paper: "Interpreting Federated Learning by Aggregating SHAP Explanations"
+by Valerio Bonsignori, Luca Corbucci, Francesca Naretto,
+   Riccardo Guidotti and Anna Monreale
+
+Builds on "Explaining Black-Boxes in Federated Learning"
 by Luca Corbucci, Riccardo Guidotti and Anna Monreale
 
-Implementation by: Valerio Bonsignori
-Project of Phd student: Valerio Bonsignori
+PhD Candidate project's Valerio Bonsignori
+Implemented by Valerio Bonsignori

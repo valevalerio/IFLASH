@@ -1,8 +1,12 @@
 # iFLASH: Interpreting Federated Learning by Aggregating SHAP Explanations
 
+![Flower](https://img.shields.io/badge/Flower-Federated-%23F7C530.svg?style=flat&logo=flower&logoColor=white)
+[![IEEE](https://img.shields.io/badge/IEEE-11534187-00629B.svg)](https://ieeexplore.ieee.org/document/11534187)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
 Code accompanying the paper
 
-> **Interpreting Federated Learning by Aggregating SHAP Explanations**
+> [**Interpreting Federated Learning by Aggregating SHAP Explanations**](https://ieeexplore.ieee.org/document/11534187)
 > by Valerio Bonsignori, Luca Corbucci, Francesca Naretto, Riccardo Guidotti, Anna Monreale
 
 Federated Learning (FL) trains models without moving data off the clients, but
@@ -17,16 +21,14 @@ exchanged for this step.
   <img src="assets/iflash_framework.jpg" alt="iFLASH framework" width="80%"/>
 </p>
 
-> [!NOTE]
-> This repository is a **reference implementation**: it is the research code
-> used to run the experiments in the paper, cleaned up for reading. It is not
-> packaged to run end to end. See [Status and known limitations](#status-and-known-limitations).
 
 ## Aggregation strategies
 
 Each strategy combines, sample by sample, the SHAP explanations
 $\phi_c$ of the clients $c \in C$. Each client explanation comes with its
-Faithfulness $faith_c \in [-1, 1]$ and the client's (macro) F1 score. The
+
+[Faithfulness](https://papers.nips.cc/paper/8003-towards-robust-interpretability-with-self-explaining-neural-networks.pdf)
+ $faith_c \in [-1, 1]$ and the client's (macro) F1 score. The
 implementation is in [`iflash/aggregation.py`](iflash/aggregation.py).
 
 | Paper | Code key | Aggregation |
@@ -65,6 +67,21 @@ Distribution of the Faithfulness of the server and of every client's explanation
 as the base value used to compute Faithfulness changes (Dry Bean, all settings).
 
 <p align="center"><img src="assets/dry_bean_faithfulness_joyplots.gif" alt="Faithfulness joyplots, Dry Bean" width="90%"/></p>
+
+
+## Citation
+
+If you use this code, please cite the paper:
+
+```bibtex
+@article{bonsignori2026iflash,
+  title   = {Interpreting Federated Learning by Aggregating SHAP Explanations},
+  author  = {Bonsignori, Valerio and Corbucci, Luca and Naretto, Francesca and Guidotti, Riccardo and Monreale, Anna},
+  journal = {IEEE Access},
+  year    = {2026}
+}
+```
+
 
 ## Repository structure
 
@@ -138,7 +155,7 @@ In the cross-device setting the federated models were trained separately. The
 node splits are in `cross_device/`, and explanation, aggregation and evaluation
 are in the `cross_device_*` notebooks.
 
-## Status and known limitations
+<!-- ## Status and known limitations 
 
 - **Reference code, not a package.** Paths, dataset names and experiment
   identifiers are the ones used during the experiments. The notebooks expect
@@ -161,6 +178,8 @@ are in the `cross_device_*` notebooks.
   paper (`flexai_lib.py`). The module layout and docstrings are new; the
   numerical behaviour is unchanged. `from iflash import *` exposes the same
   names as the original module, which the notebooks rely on.
+-->
+
 
 ## Citation
 
@@ -174,12 +193,3 @@ If you use this code, please cite the paper:
   year    = {2026}
 }
 ```
-
-## Acknowledgements
-
-This work builds on *Explaining Black-Boxes in Federated Learning*
-(Corbucci, Guidotti, Monreale), whose averaging scheme is the $E_{Avg}$ baseline.
-
-## License
-
-[MIT](LICENSE)
